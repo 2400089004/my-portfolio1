@@ -1,6 +1,6 @@
-/* =========================
-   GLOBAL
-========================= */
+/* =========================================
+   RESET
+========================================= */
 
 * {
     margin: 0;
@@ -14,7 +14,7 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #080b12;
+    background: #070b12;
     color: #ffffff;
     line-height: 1.6;
 }
@@ -30,54 +30,51 @@ a {
     margin: auto;
 }
 
-.section {
-    padding: 100px 0;
-}
 
-.dark-section {
-    background: #0d111a;
-}
-
-
-/* =========================
+/* =========================================
    NAVBAR
-========================= */
+========================================= */
 
 .navbar {
     position: fixed;
+
     top: 0;
     left: 0;
 
     width: 100%;
     height: 75px;
 
+    padding: 0 7%;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    padding: 0 7%;
+    background: rgba(7, 11, 18, 0.96);
 
-    background: rgba(8, 11, 18, 0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
 
     z-index: 1000;
 }
 
-.logo span {
+.logo {
+    width: 45px;
+    height: 45px;
+
     display: flex;
     align-items: center;
     justify-content: center;
 
-    width: 45px;
-    height: 45px;
+    background: #00a8ff;
 
     border-radius: 50%;
 
-    background: #00a8ff;
+    color: #ffffff;
 
-    font-weight: bold;
-    font-size: 16px;
+    font-size: 15px;
+    font-weight: 700;
 }
 
 .navbar nav {
@@ -86,8 +83,9 @@ a {
 }
 
 .navbar nav a {
-    color: #c8ced8;
-    font-size: 15px;
+    color: #c5ccd7;
+
+    font-size: 14px;
 
     transition: 0.3s;
 }
@@ -97,9 +95,9 @@ a {
 }
 
 
-/* =========================
+/* =========================================
    HERO
-========================= */
+========================================= */
 
 .hero {
     min-height: 100vh;
@@ -111,30 +109,30 @@ a {
 
     background:
         radial-gradient(
-            circle at 80% 30%,
-            rgba(0,168,255,0.15),
+            circle at 80% 25%,
+            rgba(0, 168, 255, 0.15),
             transparent 35%
         );
 }
 
 .hero-content {
-    max-width: 850px;
+    max-width: 900px;
 }
 
-.small-title {
+.hero-small {
     color: #00a8ff;
 
-    font-size: 14px;
-
-    letter-spacing: 3px;
+    font-size: 13px;
 
     font-weight: bold;
+
+    letter-spacing: 4px;
 
     margin-bottom: 20px;
 }
 
 .hero h1 {
-    font-size: clamp(40px, 6vw, 72px);
+    font-size: clamp(42px, 6vw, 72px);
 
     line-height: 1.1;
 
@@ -146,17 +144,17 @@ a {
 }
 
 .hero h2 {
-    color: #d8dde7;
-
     font-size: clamp(22px, 3vw, 34px);
+
+    color: #d9dee7;
 
     margin-bottom: 25px;
 }
 
-.hero-description {
-    color: #9da6b5;
+.hero-text {
+    max-width: 750px;
 
-    max-width: 700px;
+    color: #98a2b2;
 
     font-size: 18px;
 
@@ -165,6 +163,7 @@ a {
 
 .hero-buttons {
     display: flex;
+
     gap: 15px;
 }
 
@@ -173,35 +172,47 @@ a {
 
     border-radius: 8px;
 
-    font-weight: bold;
+    font-weight: 600;
 
     transition: 0.3s;
 }
 
-.primary-btn {
+.primary {
     background: #00a8ff;
+
     color: white;
 }
 
-.primary-btn:hover {
-    background: #0088cc;
+.primary:hover {
+    background: #0087cc;
+
     transform: translateY(-3px);
 }
 
-.secondary-btn {
+.secondary {
     border: 1px solid #00a8ff;
+
     color: #00a8ff;
 }
 
-.secondary-btn:hover {
+.secondary:hover {
     background: #00a8ff;
+
     color: white;
 }
 
 
-/* =========================
-   SECTION TITLES
-========================= */
+/* =========================================
+   SECTIONS
+========================================= */
+
+.section {
+    padding: 100px 0;
+}
+
+.dark-section {
+    background: #0c111a;
+}
 
 .section-title {
     text-align: center;
@@ -214,15 +225,15 @@ a {
 .section-subtitle {
     text-align: center;
 
-    color: #8993a4;
+    color: #7f8a9c;
 
     margin-bottom: 55px;
 }
 
 
-/* =========================
+/* =========================================
    ABOUT
-========================= */
+========================================= */
 
 .about-content {
     max-width: 850px;
@@ -231,7 +242,7 @@ a {
 
     text-align: center;
 
-    color: #aeb6c3;
+    color: #aeb6c4;
 
     font-size: 18px;
 }
@@ -241,9 +252,9 @@ a {
 }
 
 
-/* =========================
+/* =========================================
    SKILLS
-========================= */
+========================================= */
 
 .skills-grid {
     display: grid;
@@ -259,9 +270,9 @@ a {
 
     background: #111722;
 
-    border: 1px solid #202938;
+    border: 1px solid #202a39;
 
-    border-radius: 14px;
+    border-radius: 15px;
 
     transition: 0.3s;
 }
@@ -283,13 +294,15 @@ a {
 }
 
 .skill-card p {
-    color: #8993a4;
+    color: #8994a5;
+
+    font-size: 14px;
 }
 
 
-/* =========================
+/* =========================================
    PROJECTS
-========================= */
+========================================= */
 
 .projects-grid {
     display: grid;
@@ -301,13 +314,11 @@ a {
 }
 
 .project-card {
-    position: relative;
-
     padding: 35px;
 
-    background: #10151f;
+    background: #10151e;
 
-    border: 1px solid #202938;
+    border: 1px solid #202a39;
 
     border-radius: 15px;
 
@@ -321,9 +332,11 @@ a {
 }
 
 .project-number {
+    display: block;
+
     color: #00a8ff;
 
-    font-size: 14px;
+    font-size: 13px;
 
     font-weight: bold;
 
@@ -337,12 +350,12 @@ a {
 }
 
 .project-card p {
-    color: #929baa;
+    color: #909baa;
 
     margin-bottom: 20px;
 }
 
-.tech-list {
+.tags {
     display: flex;
 
     flex-wrap: wrap;
@@ -350,12 +363,12 @@ a {
     gap: 8px;
 }
 
-.tech-list span {
+.tags span {
     padding: 5px 10px;
 
-    border-radius: 5px;
+    background: #18202c;
 
-    background: #18202d;
+    border-radius: 5px;
 
     color: #00a8ff;
 
@@ -363,9 +376,9 @@ a {
 }
 
 
-/* =========================
+/* =========================================
    CERTIFICATES
-========================= */
+========================================= */
 
 .certificate-grid {
     display: grid;
@@ -389,24 +402,26 @@ a {
 
     background: #111722;
 
-    border: 1px solid #242d3b;
+    border: 1px solid #242e3d;
 
     border-radius: 16px;
 
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .certificate-card:hover {
-    transform: translateY(-7px);
+    transform: translateY(-8px);
 
     border-color: #00a8ff;
 
     box-shadow:
-        0 15px 40px rgba(0,168,255,0.08);
+        0 15px 40px rgba(0, 168, 255, 0.08);
 }
 
 
-/* Certificate logo */
+/* =========================================
+   CERTIFICATE LOGOS
+========================================= */
 
 .certificate-logo {
     min-width: 70px;
@@ -415,86 +430,102 @@ a {
     height: 70px;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
 
     border-radius: 14px;
 
-    font-weight: bold;
-
     font-size: 18px;
+
+    font-weight: bold;
 }
 
-.aws-logo {
+.aws {
     background: #ff9900;
-    color: #111;
+
+    color: #111111;
 }
 
-.aviatrix-logo {
+.aviatrix {
     background: #f15a24;
+
     color: white;
 }
 
-.oracle-logo {
+.oracle {
     background: #c74634;
+
     color: white;
 }
 
-.copado-logo {
+.copado {
     background: #08b8df;
+
     color: white;
 }
 
 
-/* Certificate content */
+/* =========================================
+   CERTIFICATE CONTENT
+========================================= */
 
-.certificate-info {
+.certificate-content {
     flex: 1;
 }
 
-.certificate-tag {
+.certificate-label {
     display: inline-block;
 
     color: #00a8ff;
 
-    font-size: 11px;
+    font-size: 10px;
 
     font-weight: bold;
 
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
 
     margin-bottom: 8px;
 }
 
-.certificate-info h3 {
+.certificate-content h3 {
     font-size: 20px;
 
-    line-height: 1.3;
+    line-height: 1.35;
 
     margin-bottom: 7px;
 }
 
-.certificate-info > p {
-    color: #a5adba;
+.issuer {
+    color: #aab3c0;
+
+    font-size: 14px;
 
     margin-bottom: 8px;
 }
 
-.certificate-date {
-    font-size: 13px !important;
+.date {
+    color: #737f91;
 
-    color: #737e90 !important;
+    font-size: 12px;
 
     line-height: 1.7;
 }
 
+
+/* =========================================
+   VIEW CERTIFICATE BUTTON
+========================================= */
+
 .certificate-btn {
-    display: inline-block;
+    display: inline-flex;
 
-    margin-top: 12px;
+    align-items: center;
 
-    padding: 8px 15px;
+    gap: 8px;
+
+    margin-top: 15px;
+
+    padding: 9px 16px;
 
     border: 1px solid #00a8ff;
 
@@ -503,6 +534,14 @@ a {
     color: #00a8ff;
 
     font-size: 13px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.certificate-btn span {
+    font-size: 17px;
 
     transition: 0.3s;
 }
@@ -513,62 +552,80 @@ a {
     color: white;
 }
 
+.certificate-btn:hover span {
+    transform: translateX(4px);
+}
 
-/* =========================
+
+/* =========================================
    CONTACT
-========================= */
+========================================= */
 
-.contact-box {
+.contact-container {
     display: flex;
 
     justify-content: center;
+
+    align-items: center;
 
     flex-wrap: wrap;
 
     gap: 20px;
 }
 
-.contact-box a {
+.contact-container a {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
     padding: 15px 25px;
 
-    border: 1px solid #283243;
+    border: 1px solid #283344;
 
     border-radius: 8px;
 
-    color: #b7c0cd;
+    color: #aeb7c4;
 
     transition: 0.3s;
 }
 
-.contact-box a:hover {
+.contact-container a:hover {
     color: #00a8ff;
 
     border-color: #00a8ff;
+
+    transform: translateY(-3px);
 }
 
 
-/* =========================
+/* =========================================
    FOOTER
-========================= */
+========================================= */
 
 footer {
-    text-align: center;
+    padding: 30px;
 
-    padding: 25px;
+    text-align: center;
 
     border-top: 1px solid #202938;
 
-    color: #697486;
+    color: #697487;
 
-    font-size: 14px;
+    font-size: 13px;
+}
+
+footer p:first-child {
+    margin-bottom: 5px;
 }
 
 
-/* =========================
+/* =========================================
    RESPONSIVE
-========================= */
+========================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
 
     .skills-grid {
         grid-template-columns:
@@ -576,13 +633,11 @@ footer {
     }
 
     .projects-grid {
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
     }
 
     .certificate-grid {
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
     }
 
 }
@@ -599,7 +654,7 @@ footer {
     }
 
     .navbar nav a {
-        font-size: 12px;
+        font-size: 11px;
     }
 
     .hero {
@@ -622,8 +677,7 @@ footer {
     }
 
     .skills-grid {
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
     }
 
     .certificate-card {
@@ -631,10 +685,9 @@ footer {
     }
 
     .certificate-logo {
-        min-width: 60px;
-
-        width: 60px;
-        height: 60px;
+        width: 65px;
+        min-width: 65px;
+        height: 65px;
     }
 
 }
@@ -653,6 +706,10 @@ footer {
 
     .hero h2 {
         font-size: 23px;
+    }
+
+    .certificate-content h3 {
+        font-size: 18px;
     }
 
 }
